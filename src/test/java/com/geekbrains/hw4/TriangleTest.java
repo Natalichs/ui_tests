@@ -5,6 +5,8 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.stream.Stream;
 
@@ -12,6 +14,7 @@ import static com.geekbrains.hw4.Triangle.isTriangle;
 import static com.geekbrains.hw4.Triangle.triangleSquare;
 
 public class TriangleTest {
+    private static Logger logger = LoggerFactory.getLogger("TriangleTest");
 
     static Stream ms() {
         return Stream.of(Arguments.of(new Triangle(1,2,3)), Arguments.of(new Triangle(2,3,6)));
