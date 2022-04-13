@@ -1,5 +1,6 @@
 package com.geekbrains.hw6;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -13,6 +14,7 @@ public class AddPopup extends StartView{
     @FindBy(css = ".button-container a")
     public WebElement ProceedAccess;
 
+    @Step("Кликнуть Продолжить после добавления товара в корзину")
     public OrderPage clickProceed(){
         webDriverWait.until(ExpectedConditions.visibilityOf(ProceedAccess));
         ProceedAccess.click();
